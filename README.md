@@ -1,0 +1,1 @@
+This repository has all the projects and tasks from the SheCodes workshop.
