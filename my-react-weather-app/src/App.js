@@ -1,7 +1,7 @@
 import React from "react";
-import Weather from "./Weather";
+import MainWeather from "./MainWeather";
 import NearbyCities from "./NearbyCities";
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <header></header>
       <section className= "weather-app">
         <NearbyCities />
-        <Weather defaultCity="Durban"/>
+        <MainWeather defaultCity="Durban"/>
       </section>
       <footer>
         This project was coded by{" "}

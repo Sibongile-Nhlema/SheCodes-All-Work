@@ -1,5 +1,5 @@
 import React from "react";
-import "./NearbyCities.css"
+import "./styles/NearbyCities.css"
 function NearbyCities() {
   return (
     <div className="container p-3">
