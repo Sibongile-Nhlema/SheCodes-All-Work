@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header>The Awesome Weather App</header>
+      <header  >The Awesome Weather App</header>
       <section className= "weather-app">
         <NearbyCities />
         <Weather defaultCity="Durban"/>
