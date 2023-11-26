@@ -30,7 +30,7 @@ function App() {
           </a>{" "}
           and{" "}
           <a
-            href="https://sparkling-pasca-2dd4b5.netlify.app/"
+            href="https://main--astonishing-paletas-b30875.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
