@@ -20,7 +20,7 @@ export default function WeatherTemperature(props) {
       <span className="temperature">{Math.round(temperature)}</span>
       <span className="unit">
         <a
-          href="#"
+          href="./"
           onClick={() => setUnit("celsius")}
           className={unit === "celsius" ? "active" : ""}
         >
@@ -29,7 +29,7 @@ export default function WeatherTemperature(props) {
       </span>
       <span className="unit">
         <a
-          href="#"
+          href="./"
           onClick={() => setUnit("fahrenheit")}
           className={unit === "fahrenheit" ? "active" : ""}
         >
