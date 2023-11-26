@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header  >The Awesome Weather App</header>
+      <header></header>
       <section className= "weather-app">
         <NearbyCities />
         <Weather defaultCity="Durban"/>
@@ -14,7 +14,7 @@ function App() {
       <footer>
         This project was coded by{" "}
           <a
-            href="https://www.delac.io/"
+            href="https://www.linkedin.com/in/sibongile-nhlema/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -22,7 +22,7 @@ function App() {
           </a>{" "}
           and is{" "}
           <a
-            href="https://github.com/wecodeschool/react-weather-app"
+            href="https://github.com/Sibongile-Nhlema/SheCodes-All-Work/tree/main/my-react-weather-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -30,7 +30,7 @@ function App() {
           </a>{" "}
           and{" "}
           <a
-            href="https://suspicious-beaver-111c4d.netlify.com/"
+            href="https://sparkling-pasca-2dd4b5.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >

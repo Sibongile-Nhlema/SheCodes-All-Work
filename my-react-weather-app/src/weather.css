@@ -24,7 +24,7 @@
 
 .Weather .temperature {
   font-weight: bold;
-  color: rgb(33, 33, 33);
+  color: black;
   font-size: 60px;
   line-height: 64px;
   margin-left: 5px;
@@ -43,4 +43,8 @@
   position: relative;
   line-height: 1;
   top: -34px;
+}
+
+button {
+  background-color: red;
 }

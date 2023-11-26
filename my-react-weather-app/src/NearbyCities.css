@@ -20,17 +20,6 @@ body {
   color: lightseagreen;
 }
 .fCity:hover {
-  color: black;
+  color: white;
   cursor: pointer;
-}
-.temperature {
-  font-size: 40px;
-  color: darkcyan;
-}
-.units a {
-  text-decoration: none;
-  color: black;
-}
-.units a:hover {
-  color: darkcyan;
 }
