@@ -30,7 +30,6 @@ export default function MainWeather(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
-    setCity("");
   }
 
   function handleCityChange(event) {
@@ -65,7 +64,6 @@ export default function MainWeather(props) {
                 placeholder="Enter a city or country.."
                 className="form-control no-corner"
                 autoFocus="on"
-                value={city}
                 onChange={handleCityChange}
               />
             </div>
