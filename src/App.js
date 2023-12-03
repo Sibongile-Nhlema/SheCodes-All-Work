@@ -1,6 +1,5 @@
 import React from "react";
 import MainWeather from "./MainWeather";
-import NearbyCities from "./NearbyCities";
 import './styles/App.css';
 
 function App() {
