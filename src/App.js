@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <header></header>
       <section className= "weather-app">
-        <NearbyCities />
         <MainWeather defaultCity="Durban"/>
       </section>
       <footer>

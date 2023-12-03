@@ -24,7 +24,7 @@
 
 .Weather .temperature {
   font-weight: bold;
-  color: black;
+  color: #324434;
   font-size: 60px;
   line-height: 64px;
   margin-left: 5px;
@@ -37,7 +37,7 @@
 }
 
 .Weather .unit {
-  color: rgb(33, 33, 33);
+  color: #5c715e;
   font-size: 16px;
   font-weight: 400;
   position: relative;
@@ -45,6 +45,13 @@
   top: -34px;
 }
 
-button {
-  background-color: red;
+.no-corner {
+  border-radius: 50px;
+}
+.btn-search {
+  background-color: #5c715e !important;
+  border: none;
+}
+.btn-search:hover {
+  background-color: #427c52 !important;
 }

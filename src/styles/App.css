@@ -1,9 +1,9 @@
 .weather-app {
-  border: 2px solid #80a3a2 !important;
-  background-color: #e3f4f7;
+  border: 5px solid #d3e3d1 !important;
+  background-color: #b6cdbd;
   padding: 15px;
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 50px !important;
   max-width: 600px;
 } 
 a {
@@ -13,8 +13,9 @@ a {
   color: black;
 }
 .unit a:hover {
-  color: lightseagreen;
+  color: rgb(17, 101, 97);
 }
+
 footer {
   text-align: center;
 }

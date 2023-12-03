@@ -3,10 +3,13 @@ import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import './styles/MainWeather.css';
 import CurrentForecast from "./CurrentForecast";
+import NearbyCities from "./NearbyCities";
+
 
 export default function MainWeather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [nearbyCities, setNearbyCities] = useState([]);
 
   function handleResponse(response) {
     setWeatherData({
@@ -20,6 +23,7 @@ export default function MainWeather(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
     });
+    fetchNearbyCities(response.data.coord);
   }
 
   function handleSubmit(event) {
@@ -37,16 +41,27 @@ export default function MainWeather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function fetchNearbyCities(coordinates) {
+  const apiKey = "62231151ce343c4d68652e1617efc22f";
+  const apiUrl = `https://api.openweathermap.org/data/2.5/find?lat=${coordinates.lat}&lon=${coordinates.lon}&cnt=5&appid=${apiKey}`;
+
+  axios.get(apiUrl).then((response) => {
+    const cities = response.data.list.map((city) => city.name);
+    setNearbyCities(cities);
+  });
+}
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
+        <NearbyCities nearbyCities={nearbyCities}  />
         <form className="search-form container p-2" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
                 type="search"
                 placeholder="Enter a city or country.."
-                className="form-control"
+                className="form-control no-corner"
                 autoFocus="on"
                 onChange={handleCityChange}
               />
@@ -55,7 +70,7 @@ export default function MainWeather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-primary w-100"
+                className="btn btn-primary w-100 no-corner btn-search"
               />
             </div>
           </div>

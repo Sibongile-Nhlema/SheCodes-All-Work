@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/NearbyCities.css"
-function NearbyCities() {
+
+export default function NearbyCities({ nearbyCities }) {
+  const [visibleCities, setVisibleCities] = useState([]);
+
+  useEffect(() => {
+    setVisibleCities(nearbyCities.slice(1, 5));
+  }, [nearbyCities]);
+
   return (
     <div className="container p-3">
       <div className="row">
-        <div className="col fCity">Johannesburg</div>
-        <div className="col fCity">Cape Town</div>
-        <div className="col fCity">Kimberly</div>
-        <div className="col fCity">Harare</div>
-        <div className="col fCity">Maputo</div>
+        {visibleCities.map((city) => (
+          <div className="col fCity" key={city}>
+            {city}
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
-export default NearbyCities;
+
+
+
