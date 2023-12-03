@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import './styles/MainWeather.css';
+import CurrentForecast from "./CurrentForecast";
 
 export default function MainWeather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -60,6 +61,8 @@ export default function MainWeather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <hr />
+        <CurrentForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
